@@ -1,3 +1,5 @@
+// GAME CAN BE FOUND AT: https://aprilleperez.github.io/bootstrap-portfolio/portfolio.html
+
 //variables to dynamically change displayed HTML
 var domChosenLetters = document.getElementById("domChosenLetters");
 var domWins = document.getElementById("domWins");
@@ -107,108 +109,6 @@ function resetGame() {
     domChosenLetters.textContent = chosenSong.join("");
 
 }
-
-
-
-
-
-
-// CREATE README AND ADD TO PORTFOLIO
-
-
-
-
-
-
-
-
-
-
-
-
-// updates word by replacing underscores with letter guessed
-// function correctLetter() {
-//     document.getElementById("domChosenLetters").textContent = "";
-//     for (var j = 0; j < chosenSong.randomSong.length; j++) {
-//         document.getElementById("domChosenLetters").textContent += chosenSong.myLetter[j];
-//     }
-// }
-
-
-
-    // for (var j = 0; j < chosenSong.length; j++) {
-    //     if (myLetter === chosenSong[j]) {
-    //         chosenSong[j] = myLetter;
-    //     } else {
-    //         incorrectLetter.push(myLetter);
-    //         domIncorrectLetters.textContent += myLetter;
-    //     }
-    // }  
-
-
-
-        // listen for letter pressed
-    // store myLetter pressed 
-    // loop through index of chosen word
-    // if myLetter matches indexed letter
-    // change chosenSong[i] = myLetter
-    // else myLetter doesn't match indexed chosenSong
-    // push myLetter to incorrectLetter
-    // OLD CODE THAT SORTA WORKED 
-    // for (var j = 0; j < chosenSong.length; j++) {
-    //     if (myLetter === chosenSong[j]) {
-    //         chosenSong[j] = myLetter;
-    //     } else {
-    //         incorrectLetter.push(myLetter);
-    //         domIncorrectLetters.textContent += myLetter;
-    //     }
-    // } 
-
-
-
-    // for (var j = 0; j < chosenSong.length; j++) {
-    //     if (myLetter === chosenSong[j]) {
-    //         chosenSong[j] = myLetter;
-    //     } else {
-    //         incorrectLetter.push(myLetter);
-    //         domIncorrectLetters.textContent += myLetter;
-    //     }
-    // } 
-
-
-
-
-    // NEW CODE THAT I WANT TO FULL WORKS
-    //if my letter is found in the index of random song --> index of chosen word should equal my letter
-//     if (randomSong.indexOf(myLetter) >= 0) {
-//         chosenSong[randomSong.indexOf(myLetter)] = myLetter;
-//     }
-// }
-
-
-
-    // if statement game loop old code
-   // chosenSong[intOfMyLetter] === myLetter; // indexed underscore will be my letter
-        // domChosenLetters.textContent = myLetter[intOfMyLetter];
-        // domChosenLetters.textContent = chosenSongmy[int];
-        // domChosenLetters.textContent += myLetter;
-
-
-
-
-//LOSES
-//if guessesRemaining === 0
-//add 1 point to lose
-//alert "you lost. press the reset button to keep playing. Exit game to stop"
-
-// function loses () {
-//     if (guessesRemaining === 0) {
-//         domLoses++;
-//         alert("You lost :( Click Reset button to keep playing.");
-//     }
-
-// }
-
 
 
 
