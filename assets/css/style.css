@@ -1,0 +1,11 @@
+HTML, body {
+    margin: 0px;
+    padding: 0px;
+      border: 0px;
+    }
+
+body {
+    background-image: url("../images/thankunext.jpg");
+    font-family: 'Nunito', sans-serif;
+}
+
