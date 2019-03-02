@@ -42,23 +42,27 @@ document.onkeyup = function (event) {
 
     // if my letter is found in the index of randomSong
     if (intOfMyLetter >= 0) { // if my letter is inside the word
-        //add loop through array for multiple letters -----------------CASE FOR MULTIPLE CORRECT LETTERS
-        for (var j = 0; j < randomSong.length; j++) {
+        for (var j = 0; j < randomSong.length; j++) { //add loop through string array of randomSong to check for multiple letters
             if (randomSong[j] === myLetter) { //if myLetter(s) is found in any index of randomSong(s)
                 chosenSong[j] = myLetter       // matching indexes of chosenSong(underscores) change to myLetter
             }
         }
+        console.log(myLetter);
+        console.log("FIRST");
 
-        chosenSong.splice(intOfMyLetter, 1, myLetter);
-        var strSong = chosenSong.join("");
-        console.log(chosenSong + "win condition");
-        domChosenLetters.textContent = strSong;
+        chosenSong.splice(intOfMyLetter, 1, myLetter); //changes underscore value to myLetter value
+        var strSong = chosenSong.join(""); // joins the string without commas and stores in variable
+        domChosenLetters.textContent = strSong; //displays updated string on DOM
 
-        if (strSong === randomSong) {
-            // alert("You won! Wanna keep playing?");
-            wins++;
-            domWins.textContent = wins;
-            // resetGame();
+        console.log("SECOND");
+
+
+        if (strSong === randomSong) { // check for win, if updated string = random song (string)
+            endAlert("You won! Wanna keep playing?");
+            //alert("You won! Wanna keep playing?");
+            wins++; // increase win score
+            domWins.textContent = wins; // print to DOM
+            resetGame();
         }
 
     } else if (myLetter != undefined) { //as long as letter doesn't equal undefined
@@ -67,32 +71,21 @@ document.onkeyup = function (event) {
         guessesRemaining--; //decreases guessesRemaining only if guess is wrong
         domGuessesRemaining.textContent = guessesRemaining;
 
-        if (guessesRemaining === 0) { // check for loss
-            alert("You lost :( Try Again?"); // end game
-            loses++;
-            domLoses.textContent = loses;
+        if (guessesRemaining === 0) { // check for loss, if guesses remaining reaches 0
+            endAlert("You lost :( Try Again?"); 
+            loses++; // increase lose score
+            domLoses.textContent = loses; //print to DOM
             resetGame();
         }
     }
 }
 
 
-//WINS
-//if chosenSong (all underscores at first) === randomSong (string) <<< !!!!
-//alert "You won! Wanna keep playing?"
-//increment win
-//change textContent to added win value
-//call resetGame
 
-
-// function win() {
-//     if (chosenSong === randomSong) {
-//         wins++;
-//         alert("You won! Click Reset button to keep playing.");
-//         domWins.textContent = wins;
-//     }   
-// }
-
+// SET A BIT OF TIMEOUT FOR ALERT POPUP
+function endAlert(endMessage) {
+    setTimeout(function(){ alert(endMessage); }, 200);
+ }
 
 
 
@@ -114,19 +107,6 @@ function resetGame() {
     domChosenLetters.textContent = chosenSong.join("");
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
