@@ -11,4 +11,4 @@ Game title/how-to-play, random word to be guessed, area for incorrectly guessed 
 
 ## Project Link
 
-* [Thank U, Guess!](https://aprilleperez.github.io/wordGuessGame/)
+[Thank U, Guess!](https://aprilleperez.github.io/wordGuessGame/)
